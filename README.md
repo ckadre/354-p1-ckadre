@@ -1,8 +1,8 @@
 # Project #: Project Name
 
-* Author: Your Name
+* Author: Cameron Kadre
 * Class: CS354 Section #
-* Semester:
+* Semester: Fall 2026
 
 ## Overview
 
@@ -33,11 +33,6 @@ you were asked to perform as part of the project.
 
 ## Sources used
 
-If you used any sources outside of the lecture notes, class lab files,
-or text book you need to list them here. If you looked something up on
-stackoverflow.com and fail to cite it in this section it will be
-considered plagiarism and be dealt with accordingly. So be safe CITE!
-
-Finally, remove these instructions from your README.md after you are finished!
+The GO language official documentation
 
 ----------
