@@ -5,18 +5,18 @@ import (
 )
 
 type Bank struct {
-	accounts []account.Account
-	i int
+	accounts []account.Accounter
+	i        int
 }
 
 func NewBank(len int) (b *Bank) {
 	b = new(Bank)
-	b.accounts = make([]account.Account, len)
+	b.accounts = make([]account.Accounter, len)
 	b.i = 0
 	return b
 }
 
-func (b *Bank) add(Account account.Account) {
+func (b *Bank) add(Account account.Accounter) {
 	b.accounts[b.i] = Account
 	b.i += 1
 }
@@ -26,7 +26,9 @@ func (b *Bank) accrue(rate float32) {
 }
 
 func (b *Bank) ToString() (bnk string) {
-	for  := range b.i {
-		bnk.append()
+	var str string = ""
+	for v := range b.i {
+		str += account.Accounter.ToString(b.accounts[v])
 	}
+	return str
 }

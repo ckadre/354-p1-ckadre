@@ -36,6 +36,6 @@ func (ca *checkingAccount) withdraw(amount float32) {
 	ca.bal -= amount
 }
 
-func (ca *checkingAccount) Stringer() (rtn string) {
+func (ca *checkingAccount) ToString() (rtn string) {
 	return strconv.Itoa(ca.number) + ": " + customer.ToString(ca.cust) + ": " + strconv.FormatFloat(float64(ca.bal), 'f', -1, 64)
 }

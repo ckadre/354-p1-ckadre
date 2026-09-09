@@ -36,6 +36,6 @@ func (sa *savingAccount) withdraw(amount float32) {
 	sa.bal -= amount
 }
 
-func (sa *savingAccount) Stringer() (rtn string) {
+func (sa *savingAccount) ToString() (rtn string) {
 	return strconv.Itoa(sa.number) + ": " + customer.ToString(sa.cust) + ": " + strconv.FormatFloat(float64(sa.bal), 'f', -1, 64)
 }

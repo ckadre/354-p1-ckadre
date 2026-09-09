@@ -1,7 +1,5 @@
 package account
 
-import "fmt"
-
 type Accounter interface {
 	balance() float32
 
@@ -11,5 +9,5 @@ type Accounter interface {
 
 	withdraw(amount float32)
 
-	fmt.Stringer
+	ToString() (rtn string)
 }
