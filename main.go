@@ -18,9 +18,14 @@ func main() {
 
 	fmt.Println(chkac.ToString())
 
+	chkac.Deposit(100.0)
+
 	fmt.Println(savac.ToString())
 
 	fmt.Println(bnk.ToString())
 
-	//bnk.add(savac)
+	bnk.Add(savac)
+	bnk.Add(chkac)
+
+	fmt.Println(bnk.ToString())
 }

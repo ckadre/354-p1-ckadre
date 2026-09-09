@@ -20,19 +20,19 @@ func NewCheckingAccount(num int, bal float32, cust *customer.Customer) (ca *chec
 	return ca
 }
 
-func (ca *checkingAccount) accrue(rate float32) {
+func (ca *checkingAccount) Accrue(rate float32) {
 	//checking accounts don't accrue interest
 }
 
-func (ca *checkingAccount) balance() float32 {
+func (ca *checkingAccount) Balance() float32 {
 	return ca.bal
 }
 
-func (ca *checkingAccount) deposit(amount float32) {
+func (ca *checkingAccount) Deposit(amount float32) {
 	ca.bal += amount
 }
 
-func (ca *checkingAccount) withdraw(amount float32) {
+func (ca *checkingAccount) Withdraw(amount float32) {
 	ca.bal -= amount
 }
 

@@ -16,7 +16,7 @@ func NewBank(len int) (b *Bank) {
 	return b
 }
 
-func (b *Bank) add(Account account.Accounter) {
+func (b *Bank) Add(Account account.Accounter) {
 	b.accounts[b.i] = Account
 	b.i += 1
 }
@@ -29,6 +29,7 @@ func (b *Bank) ToString() (bnk string) {
 	var str string = ""
 	for v := range b.i {
 		str += account.Accounter.ToString(b.accounts[v])
+		str += "\n"
 	}
 	return str
 }

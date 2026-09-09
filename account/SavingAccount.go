@@ -20,19 +20,19 @@ func NewSavingAccount(num int, bal float32, cust *customer.Customer) (sa *saving
 	return sa
 }
 
-func (sa *savingAccount) accrue(rate float32) {
+func (sa *savingAccount) Accrue(rate float32) {
 	sa.bal *= rate
 }
 
-func (sa *savingAccount) balance() (bal float32) {
+func (sa *savingAccount) Balance() (bal float32) {
 	return sa.bal
 }
 
-func (sa *savingAccount) deposit(amount float32) {
+func (sa *savingAccount) Deposit(amount float32) {
 	sa.bal += amount
 }
 
-func (sa *savingAccount) withdraw(amount float32) {
+func (sa *savingAccount) Withdraw(amount float32) {
 	sa.bal -= amount
 }
 

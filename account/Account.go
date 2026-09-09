@@ -1,13 +1,13 @@
 package account
 
 type Accounter interface {
-	balance() float32
+	Balance() float32
 
-	accrue(rate float32)
+	Accrue(rate float32)
 
-	deposit(amount float32)
+	Deposit(amount float32)
 
-	withdraw(amount float32)
+	Withdraw(amount float32)
 
 	ToString() (rtn string)
 }
