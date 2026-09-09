@@ -1,7 +1,7 @@
 package customer
 
 type Customer struct {
-	name string
+	name string //name of the customer
 }
 
 func NewCustomer(name string) (c *Customer) {

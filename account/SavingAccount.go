@@ -20,6 +20,7 @@ func NewSavingAccount(num int, bal float32, cust *customer.Customer) (sa *saving
 	return sa
 }
 
+// Returns the amount of interest accrued on the account
 func (sa *savingAccount) Accrue(rate float32) (total float32) {
 	sa.bal = (sa.bal * rate) + sa.bal
 	return (sa.bal * rate)

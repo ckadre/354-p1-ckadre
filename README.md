@@ -1,4 +1,4 @@
-# Project #: Project Name
+# Project #1: p1-go
 
 * Author: Cameron Kadre
 * Class: CS354 Section #
@@ -6,30 +6,37 @@
 
 ## Overview
 
-Concisely explain what the program does. If this exceeds a couple of
-sentences, you're going too far. Generally you should be pulling this
-right from the project specification. I don't want you to just cut and
-paste, but paraphrase what is stated in the project specification.
+
 
 ## Reflection
 
-Write a two paragraph reflection describing your experience with this
-project.  Talk about what worked well and what was challenging.  
-Did you run into an issue that took some time to figure out?  
-Tell us about it. What did you enjoy, what was less desirable? Feel
-free to add other items (within the two paragraph limit).
+This project was challenging, but also pretty fun, and I do like the 
+basic structure of go. After a while of struggling with go, it suddenly
+got a lot easier (in some ways). One thing that really helped me was 
+discovering (by reading the class slides with more attention) that 
+lowercase type / method names denote private visibility. It was very 
+frustrating before that to have no idea why I kept getting the error
+that my methods were unimported, when I could very clearly see at the 
+import statement that they should be. 
+
+One thing that I still struggled with my implementation of was using
+Stringer. I honestly couldn't quite figure out how that worked, for 
+some reason, and so I honestly just gave up and created ToString 
+methods for each type. I'm not sure if that was intended or not, 
+but it's what I ended up with. Another thing was my implementation
+of the Bank class. The map that was hinted in the project specs was
+way too frustrating, so I just used a slice. Because of the time
+I'd already spent fighting with that, I was pretty lazy and just 
+had the length of the Bank slice hardcoded into the constructor. 
 
 ## Compiling and Using
 
-This section should tell the user how to compile your code.  It is
-also appropriate to instruct the user how to use your code. Does your
-program require user input? If so, what does your user need to know
-about it to use it as quickly as possible?
+Run the code using go run main.go, or by running the test script
+run-test.sh
 
 ## Results
 
-This section presents timing and other results of any experiments that
-you were asked to perform as part of the project.
+N/A
 
 ## Sources used
 

@@ -1,5 +1,6 @@
 package account
 
+// interface for CheckingAccount.go and SavingAccount.go
 type Accounter interface {
 	Balance() float32
 

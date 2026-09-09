@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	var bnk = bank.NewBank(5)
+	var bnk = bank.NewBank(5) //functionality could easily be improved by not hard coding the length of the bank slice. ¯\_(ツ)_/¯
 	var ann = customer.NewCustomer("Ann")
 	var bob = customer.NewCustomer("Bob")
 
@@ -20,27 +20,4 @@ func main() {
 	bnk.Accrue(0.02)
 
 	fmt.Println(bnk.ToString())
-
-	// var savac = account.NewSavingAccount(5, 5.0, cust)
-	// var chkac = account.NewCheckingAccount(5, 0.0, cust)
-
-	// fmt.Println(customer.ToString(ann))
-
-	// fmt.Println(chkac.ToString())
-
-	// chkac.Deposit(100.0)
-
-	// fmt.Println(savac.ToString())
-
-	// fmt.Println(bnk.ToString())
-
-	// bnk.Add(savac)
-	// bnk.Add(chkac)
-
-	// fmt.Println(bnk.ToString())
-
-	// bnk.Accrue(0.1)
-
-	// fmt.Println(bnk.ToString())
-
 }

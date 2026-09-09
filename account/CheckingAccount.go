@@ -7,9 +7,9 @@ import (
 )
 
 type checkingAccount struct {
-	number int
-	bal    float32
-	cust   *customer.Customer
+	number int                //account number
+	bal    float32            //balance in the account
+	cust   *customer.Customer //customer
 }
 
 func NewCheckingAccount(num int, bal float32, cust *customer.Customer) (ca *checkingAccount) {
