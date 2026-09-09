@@ -9,27 +9,38 @@ import (
 )
 
 func main() {
-	var cust = customer.NewCustomer("megumi")
 	var bnk = bank.NewBank(5)
-	var savac = account.NewSavingAccount(5, 5.0, cust)
-	var chkac = account.NewCheckingAccount(5, 0.0, cust)
+	var ann = customer.NewCustomer("Ann")
+	var bob = customer.NewCustomer("Bob")
 
-	fmt.Println(customer.ToString(cust))
+	bnk.Add(account.NewCheckingAccount(1, 100.00, ann))
+	bnk.Add(account.NewSavingAccount(2, 200.00, ann))
+	bnk.Add(account.NewSavingAccount(3, 150.00, bob))
 
-	fmt.Println(chkac.ToString())
-
-	chkac.Deposit(100.0)
-
-	fmt.Println(savac.ToString())
+	bnk.Accrue(0.02)
 
 	fmt.Println(bnk.ToString())
 
-	bnk.Add(savac)
-	bnk.Add(chkac)
+	// var savac = account.NewSavingAccount(5, 5.0, cust)
+	// var chkac = account.NewCheckingAccount(5, 0.0, cust)
 
-	fmt.Println(bnk.ToString())
+	// fmt.Println(customer.ToString(ann))
 
-	bnk.Accrue(0.1)
+	// fmt.Println(chkac.ToString())
 
-	fmt.Println(bnk.ToString())
+	// chkac.Deposit(100.0)
+
+	// fmt.Println(savac.ToString())
+
+	// fmt.Println(bnk.ToString())
+
+	// bnk.Add(savac)
+	// bnk.Add(chkac)
+
+	// fmt.Println(bnk.ToString())
+
+	// bnk.Accrue(0.1)
+
+	// fmt.Println(bnk.ToString())
+
 }

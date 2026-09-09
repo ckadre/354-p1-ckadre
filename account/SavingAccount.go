@@ -20,8 +20,9 @@ func NewSavingAccount(num int, bal float32, cust *customer.Customer) (sa *saving
 	return sa
 }
 
-func (sa *savingAccount) Accrue(rate float32) {
+func (sa *savingAccount) Accrue(rate float32) (total float32) {
 	sa.bal = (sa.bal * rate) + sa.bal
+	return (sa.bal * rate)
 }
 
 func (sa *savingAccount) Balance() (bal float32) {
@@ -37,5 +38,5 @@ func (sa *savingAccount) Withdraw(amount float32) {
 }
 
 func (sa *savingAccount) ToString() (rtn string) {
-	return strconv.Itoa(sa.number) + ": " + customer.ToString(sa.cust) + ": " + strconv.FormatFloat(float64(sa.bal), 'f', -1, 64)
+	return strconv.Itoa(sa.number) + ": " + customer.ToString(sa.cust) + ": " + strconv.FormatFloat(float64(sa.bal), 'f', 2, 64)
 }

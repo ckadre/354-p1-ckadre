@@ -20,8 +20,9 @@ func NewCheckingAccount(num int, bal float32, cust *customer.Customer) (ca *chec
 	return ca
 }
 
-func (ca *checkingAccount) Accrue(rate float32) {
+func (ca *checkingAccount) Accrue(rate float32) (total float32) {
 	//checking accounts don't accrue interest
+	return 0.0
 }
 
 func (ca *checkingAccount) Balance() float32 {
@@ -37,5 +38,5 @@ func (ca *checkingAccount) Withdraw(amount float32) {
 }
 
 func (ca *checkingAccount) ToString() (rtn string) {
-	return strconv.Itoa(ca.number) + ": " + customer.ToString(ca.cust) + ": " + strconv.FormatFloat(float64(ca.bal), 'f', -1, 64)
+	return strconv.Itoa(ca.number) + ": " + customer.ToString(ca.cust) + ": " + strconv.FormatFloat(float64(ca.bal), 'f', 2, 64)
 }
