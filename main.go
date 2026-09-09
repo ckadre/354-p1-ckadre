@@ -12,7 +12,7 @@ func main() {
 	var cust = customer.NewCustomer("megumi")
 	var bnk = bank.NewBank(5)
 	var savac = account.NewSavingAccount(5, 5.0, cust)
-	var chkac = account.NewCheckingAccount(5, 5.0, cust)
+	var chkac = account.NewCheckingAccount(5, 0.0, cust)
 
 	fmt.Println(customer.ToString(cust))
 
@@ -26,6 +26,10 @@ func main() {
 
 	bnk.Add(savac)
 	bnk.Add(chkac)
+
+	fmt.Println(bnk.ToString())
+
+	bnk.Accrue(0.1)
 
 	fmt.Println(bnk.ToString())
 }

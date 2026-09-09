@@ -21,7 +21,7 @@ func NewSavingAccount(num int, bal float32, cust *customer.Customer) (sa *saving
 }
 
 func (sa *savingAccount) Accrue(rate float32) {
-	sa.bal *= rate
+	sa.bal = (sa.bal * rate) + sa.bal
 }
 
 func (sa *savingAccount) Balance() (bal float32) {

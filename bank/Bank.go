@@ -21,8 +21,10 @@ func (b *Bank) Add(Account account.Accounter) {
 	b.i += 1
 }
 
-func (b *Bank) accrue(rate float32) {
-
+func (b *Bank) Accrue(rate float32) {
+	for v := range b.i {
+		account.Accounter.Accrue(b.accounts[v], rate)
+	}
 }
 
 func (b *Bank) ToString() (bnk string) {
