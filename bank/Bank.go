@@ -1,6 +1,7 @@
 package bank
 
 import (
+	"math"
 	"strconv"
 
 	"github.com/ckadre/354-p1-ckadre/account"
@@ -32,11 +33,11 @@ func (b *Bank) Accrue(rate float32) {
 }
 
 func (b *Bank) ToString() (bnk string) {
-	var str string = ""
+	var str string
 	for v := range b.i {
 		str += account.Accounter.ToString(b.accounts[v])
 		str += "\n"
 	}
-	str += "Total Interest: " + strconv.FormatFloat(float64(b.interest), 'f', 2, 64) + "\n"
+	str += "Total Interest: " + strconv.FormatFloat(math.Round(float64(b.interest)), 'f', 2, 64)
 	return str
 }
