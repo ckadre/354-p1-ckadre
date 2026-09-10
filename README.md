@@ -5,7 +5,7 @@
 * Semester: Fall 2026
 
 ## Overview
-
+Uses packages to represent a basic bank account system in the languages Java and Go. 
 
 
 ## Reflection
@@ -14,10 +14,10 @@ This project was challenging, but also pretty fun, and I do like the
 basic structure of go. After a while of struggling with go, it suddenly
 got a lot easier (in some ways). One thing that really helped me was 
 discovering (by reading the class slides with more attention) that 
-lowercase type / method names denote private visibility. It was very 
-frustrating before that to have no idea why I kept getting the error
-that my methods were unimported, when I could very clearly see at the 
-import statement that they should be. 
+lowercase type / method names denote private visibility. Obviously, the 
+main thing that didn't work for me was the channels, and I couldn't
+get them implemented properly to accrue interest. It was kinda
+frustrating, I'm not quite sure what went wrong. 
 
 One thing that I still struggled with my implementation of was using
 Stringer. I honestly couldn't quite figure out how that worked, for 
